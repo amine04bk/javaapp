@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F0F0F0">
+
+    <!-- Content Section (Scrollable) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SETTINGS"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp" />
+
+            <Button
+                android:id="@+id/profile_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="PROFILE"
+                android:textColor="@android:color/black"
+                android:gravity="start|center_vertical"
+                android:padding="16dp" />
+
+            <Button
+                android:id="@+id/language_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="LANGUAGE"
+                android:textColor="@android:color/black"
+                android:gravity="start|center_vertical"
+                android:padding="16dp" />
+
+            <Button
+                android:id="@+id/rate_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="RATE ME"
+                android:textColor="@android:color/black"
+                android:gravity="start|center_vertical"
+                android:padding="16dp" />
+
+            <Button
+                android:id="@+id/export_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="EXPORT YOUR DATA"
+                android:textColor="@android:color/black"
+                android:gravity="start|center_vertical"
+                android:padding="16dp" />
+
+            <Button
+                android:id="@+id/notification_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="NOTIFICATION"
+                android:textColor="@android:color/black"
+                android:gravity="start|center_vertical"
+                android:padding="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/black"
+        app:itemIconTint="@drawable/bottom_nav_icon_tint"
+        app:itemTextColor="@drawable/bottom_nav_icon_tint"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>

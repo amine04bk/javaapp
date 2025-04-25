@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#E6F0FA">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MEASURING ..."
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DETECTING YOUR PULSE, JUST HOLD ON!"
+        android:textSize="14sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp" />
+
+    <ImageView
+        android:layout_width="301dp"
+        android:layout_height="272dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/heart_icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TAP TO START NOW"
+        android:textSize="16sp"
+        android:textColor="#FF6666"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PRESS YOUR FINGER TO COVER THE BACK CAMERA. MEASUREMENT WILL START AFTER FINGER IS DETECTED."
+        android:textSize="14sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:padding="16dp"
+        android:background="#FFF0F0"
+        android:textColor="@android:color/black" />
+
+</LinearLayout>
