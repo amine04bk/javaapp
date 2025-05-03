@@ -1,98 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#F0F0F0">
+    android:background="#e1dbf2">
 
-    <!-- Content Section (Scrollable) -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/rounded_white_background"
+        android:elevation="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:title="Settings"
+        app:titleTextColor="#333333"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/bottom_navigation">
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/bottom_navigation"
+        android:fillViewport="true">
 
-        <LinearLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_centerInParent="true"
+            app:cardBackgroundColor="#ffebee"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            android:layout_margin="24dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="SETTINGS"
-                android:textSize="20sp"
-                android:textColor="@android:color/black"
-                android:layout_gravity="center"
-                android:layout_marginTop="16dp" />
-
-            <Button
-                android:id="@+id/profile_button"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:backgroundTint="#FFFFFF"
-                android:text="PROFILE"
-                android:textColor="@android:color/black"
-                android:gravity="start|center_vertical"
-                android:padding="16dp" />
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center">
 
-            <Button
-                android:id="@+id/language_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="#FFFFFF"
-                android:text="LANGUAGE"
-                android:textColor="@android:color/black"
-                android:gravity="start|center_vertical"
-                android:padding="16dp" />
+                <Button
+                    android:id="@+id/profile_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="#f8d6d6"
+                    android:text="Profile"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:elevation="4dp" />
 
-            <Button
-                android:id="@+id/rate_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="#FFFFFF"
-                android:text="RATE ME"
-                android:textColor="@android:color/black"
-                android:gravity="start|center_vertical"
-                android:padding="16dp" />
+                <Button
+                    android:id="@+id/language_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#f8d6d6"
+                    android:text="Language"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:elevation="4dp" />
 
-            <Button
-                android:id="@+id/export_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="#FFFFFF"
-                android:text="EXPORT YOUR DATA"
-                android:textColor="@android:color/black"
-                android:gravity="start|center_vertical"
-                android:padding="16dp" />
+                <Button
+                    android:id="@+id/rate_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#f8d6d6"
+                    android:text="Rate App"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:elevation="4dp" />
 
-            <Button
-                android:id="@+id/notification_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="#FFFFFF"
-                android:text="NOTIFICATION"
-                android:textColor="@android:color/black"
-                android:gravity="start|center_vertical"
-                android:padding="16dp" />
+                <Button
+                    android:id="@+id/export_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#f8d6d6"
+                    android:text="Export Data"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:elevation="4dp" />
 
-        </LinearLayout>
+                <Button
+                    android:id="@+id/notification_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#f8d6d6"
+                    android:text="Notifications"
+                    android:textColor="#333333"
+                    android:textSize="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:elevation="4dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
     </ScrollView>
 
-    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@android:color/black"
-        app:itemIconTint="@drawable/bottom_nav_icon_tint"
-        app:itemTextColor="@drawable/bottom_nav_icon_tint"
-        app:labelVisibilityMode="unlabeled"
-        app:menu="@menu/bottom_nav_menu" />
-
+        android:background="@drawable/nav_gradient"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@animator/nav_item_color_selector"
+        app:itemTextColor="@animator/nav_item_color_selector"
+        android:elevation="8dp"
+        android:padding="8dp" />
 </RelativeLayout>

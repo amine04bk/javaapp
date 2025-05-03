@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class SettingsActivity extends AppCompatActivity {
@@ -12,6 +13,9 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
+        // Initialize toolbar
+        MaterialToolbar toolbar = findViewById(R.id.toolbar);
 
         Button profileButton = findViewById(R.id.profile_button);
         Button languageButton = findViewById(R.id.language_button);
@@ -33,16 +37,19 @@ public class SettingsActivity extends AppCompatActivity {
             int itemId = item.getItemId();
             if (itemId == R.id.nav_home) {
                 startActivity(new Intent(SettingsActivity.this, HomeActivity.class));
+                overridePendingTransition(R.animator.slide_in_right, R.animator.slide_out_left);
                 finish();
                 return true;
             } else if (itemId == R.id.nav_settings) {
-                return true;  // Already on Settings screen
+                return true;
             } else if (itemId == R.id.nav_profile) {
                 startActivity(new Intent(SettingsActivity.this, ProfileActivity.class));
+                overridePendingTransition(R.animator.slide_in_right, R.animator.slide_out_left);
                 finish();
                 return true;
             } else if (itemId == R.id.nav_analytics) {
                 startActivity(new Intent(SettingsActivity.this, AnalyticsActivity.class));
+                overridePendingTransition(R.animator.slide_in_right, R.animator.slide_out_left);
                 finish();
                 return true;
             }
